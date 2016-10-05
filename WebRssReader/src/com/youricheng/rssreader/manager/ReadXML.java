@@ -38,7 +38,13 @@ public class ReadXML {
 		String errText = ""; //记录错误信息
 		
 		for(RssConfigBean rssConfig : list){
-			
+			try {
+				System.out.println(System.getProperty("user.dir") + rssConfig.getPath());
+				ReadRss(System.getProperty("user.dir") + rssConfig.getPath());
+				
+			} catch (Exception e) {
+				errText += e.getMessage();
+			}
 		}
 	}
 	
@@ -178,10 +184,42 @@ public class ReadXML {
 			String version = outlineElt.attributeValue("version"); //拿到当前节点的version属性值
 			String type = outlineElt.attributeValue("type"); //拿到当前节点的type属性值
 			String outlineTitle = outlineElt.attributeValue("title"); //拿到当前节点title属性值
-			//String outlineText = outlineElt.attributeValue("")
+			String outlineText = outlineElt.attributeValue("text"); //拿到当前节点的text属性值
+			rssBean.setHtmlUrl(htmlUrl);
+			rssBean.setXmlUrl(xmlUrl);
+			rssBean.setVersion(version);
+			rssBean.setType(type);
+			rssBean.setTitle(outlineTitle);
+			rssBean.setText(outlineText);
 			
+			// 将每条订阅信息，存放到订阅列表中
+			rssBeanList.add(rssBean);
 		}
-		
-		
 	}
+	/**
+	 * 获取Rss分组订阅列表
+	 * @return
+	 */
+	public List<RssTeamBean> getRssTemBeanList(){
+		return rssTeamBeanList;
+	}
+	
+	public static void main(String[] args) {
+		ReadXML readXML = new ReadXML();
+		readXML.ReadRss();
+		List<RssTeamBean> rssTemBeanList = readXML.getRssTemBeanList();
+		for(RssTeamBean rssTeamBean : rssTemBeanList){
+			System.out.println("[分组title: "+ rssTeamBean.getTitle() +"  text:"+ rssTeamBean.getText() +"]");
+			for (RssBean rssBean : rssTeamBean.getRssBeanList()) {
+                System.out.print("<outline htmlUrl=\"" + rssBean.getHtmlUrl() + "\" ");
+                //System.out.print("xmlUrl=\"" + rssBean.getXmlUrl() + "\" ");
+                System.out.print("version=\"" + rssBean.getVersion() + "\" ");
+                System.out.print("type=\"" + rssBean.getType() + "\" ");
+                System.out.print("title=\"" +  rssBean.getTitle() + "\" ");
+                System.out.println("text=\"" + rssBean.getText() + "\" />");
+           }
+			System.out.println("-------------------------------------------------");
+		}
+	}
+	
 }

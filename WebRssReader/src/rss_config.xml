@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss>
+    <rss-list>
+        <rss-name>单分组foxmail6.5</rss-name>
+        <rss-path>\rss\单分组foxmail6.5.opml</rss-path>
+    </rss-list>
+    <rss-list>
+        <rss-name>多分组foxmail7</rss-name>
+        <rss-path>\rss\多分组foxmail7.opml</rss-path>
+    </rss-list>
+</rss>

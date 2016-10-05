@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Subscription in Foxmail</title>
+    </head>
+    <body>
+        <outline title="八期" text="八期">
+            <outline htmlUrl="http://blog.csdn.net/shan9liang" xmlUrl="http://blog.csdn.net/shan9liang/rss/list" version="RSS" type="rss" title="贾琳" text="贾琳的专栏"/>         
+        </outline>
+        <outline title="随便看看" text="随便看看">
+            <outline htmlUrl="http://blog.csdn.net/blogdevteam" xmlUrl="http://blog.csdn.net/blogdevteam/rss/list" version="RSS" type="rss" title="CSDN 官方博客" text="CSDN 官方博客"/>
+            <outline htmlUrl="http://blog.csdn.net/zhoufoxcn" xmlUrl="http://blog.csdn.net/zhoufoxcn/rss/list" version="RSS" type="rss" title="周公的专栏" text="周公的专栏"/>
+
+        </outline>
+        <outline title="提高班" text="提高班">
+            <outline htmlUrl="http://sxyandapp.blog.163.com" xmlUrl="http://sxyandapp.blog.163.com/rss" version="RSS" type="rss" title="石小永" text="石小永"/>
+            <outline htmlUrl="http://blog.csdn.net/qiulongtianshi" xmlUrl="http://blog.csdn.net/qiulongtianshi/rss/list" version="RSS" type="rss" title="郭校林" text="郭校林"/>
+        </outline>
+    </body>
+</opml>

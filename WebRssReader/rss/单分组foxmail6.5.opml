@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<opml version="1.1">
+    <head>
+        <title>六期新博客地址</title>
+    </head>
+    <body>
+        <outline text="丁成云" title="丁成云" type="rss" version="RSS" xmlUrl="http://blog.csdn.net/sundenskyqq/rss/list" htmlUrl="http://blog.csdn.net/sundenskyqq" description=""/>
+        <outline text="韩正阳" title="韩正阳" type="rss" version="RSS" xmlUrl="http://blog.csdn.net/jiudihanbing/rss/list" htmlUrl="http://blog.csdn.net/jiudihanbing" description=""/>
+    </body>
+</opml>
